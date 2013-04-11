@@ -2,6 +2,9 @@ local lib, oldminor = LibStub:GetLibrary("LibInternalCooldowns-1.0")
 
 -- Format is spellID = itemID | {itemID, itemID, ... itemID}
 local spellToItem = {
+	-- Shado-Pan Assault Valor Items
+	[138702] = 94508,	-- Brutal Talisman of the Shado-Pan Assault
+	
 	-- Pandaria PVP
 	[126700] = {84937, 91415, 91768, 94415},		-- Gladiator's Insignia of Victory
 	[127928] = 87574,								-- Coren's Cold Chromium Coaster
@@ -330,6 +333,9 @@ local metas = {
 -- Spell ID => cooldown, in seconds
 -- If an item isn't in here, 45 sec is assumed.
 local cooldowns = {
+	-- Shado-Pan Assault Valor Items
+	[138702] = 75,	-- Brutal Talisman of the Shado-Pan Assault
+
 	-- Pandaria PVP
 	[126700] = 50,			-- Gladiator's Insignia of Victory
 	[127928] = 60,			-- Coren's Cold Chromium Coaster
@@ -551,9 +557,9 @@ local talents = {
 	-- Priest
 	[47755] = "Rapture",
 }
-----------------------------------------------------------------------
--- Don't edit past this line										--
-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-- Don't edit past this line									--
+-----------------------------------------------------------------------
 
 ------------------------------------
 -- Upgrade this data into the lib
