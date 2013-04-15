@@ -71,7 +71,7 @@ local slots = {
 function lib:PLAYER_ENTERING_WORLD()
 	playerGUID = UnitGUID("player")	
 	self:Hook("GetInventoryItemCooldown")
-	--self:Hook("GetActionCooldown")
+	self:Hook("GetActionCooldown")
 	self:Hook("GetItemCooldown")
 end
 
