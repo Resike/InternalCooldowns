@@ -1,6 +1,5 @@
 local mod = LibStub("AceAddon-3.0"):GetAddon("InternalCooldowns"):NewModule("Forte Cooldown", "AceEvent-3.0")
 local lib = LibStub("LibInternalCooldowns-1.0")
-
 if not _G.FW then return end
 
 function mod:OnEnable()

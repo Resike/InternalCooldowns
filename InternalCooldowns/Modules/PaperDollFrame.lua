@@ -23,7 +23,7 @@ local slots = {
 	[18]= "CharacterTabardSlot"
 }
 
-local equippedItems = {}
+local equippedItems = { }
 
 function mod:OnEnable()
 	self:RegisterEvent("UNIT_INVENTORY_CHANGED")

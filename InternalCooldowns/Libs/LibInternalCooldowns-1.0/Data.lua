@@ -4,10 +4,12 @@ local lib, oldminor = LibStub:GetLibrary("LibInternalCooldowns-1.0")
 local spellToItem = {
 	-- Shado-Pan Assault Valor Items
 	[138702] = 94508,	-- Brutal Talisman of the Shado-Pan Assault
+	[138704] = 94510,	-- Volatile Talisman of the Shado-Pan Assault
+	[138700] = 94511,	-- Vicious Talisman of the Shado-Pan Assault
 	
 	-- Pandaria PVP
-	[126700] = {84937, 91415, 91768, 94415},		-- Gladiator's Insignia of Victory
-	[127928] = 87574,								-- Coren's Cold Chromium Coaster
+	[126700] = {84937, 91415, 91768, 94415},	-- Gladiator's Insignia of Victory
+	[127928] = 87574,	-- Coren's Cold Chromium Coaster
 	
 	-- Mists of Pandaria T14 Raids 
 	[126533] = {86790, 86131, 87063},	-- Vial of Dragon's Blood
@@ -59,7 +61,7 @@ local spellToItem = {
 
 	-- Dragon Soul Normal 397
 	[107986] = 77206,			-- Soulshifter Vortex
-	[107982] = {77202,77203,77204},		-- Starcatcher Compass, Insignia of the Corrupted Mind, Seal of the Seven Signs
+	[107982] = {77202, 77203 ,77204},	-- Starcatcher Compass, Insignia of the Corrupted Mind, Seal of the Seven Signs
 	[107988] = 77205,			-- Creche of the Final Dragon
 
 	-- Dragon Soul LFR 384
@@ -83,16 +85,16 @@ local spellToItem = {
 	[102659] = 72897,			-- Arrow of Time
 	[102667] = 72900,			-- Veil of Lies
 	[109993] = 74035,			-- Master Pit Fighter
-	--[102662] = 72898,			-- Foul Gift of the Demon Lord. DO NOT USE, overwrites the actual use cooldown with the internal one
-	--[102664] = 72899,			-- Varo'then's Brooch.  DO NOT USE, overwites the actual use cooldown with the internal one
-	--[102660] = 72901,			-- Rosary of Light.  Yet another item with a use and an equip proc.  This needs a workaround eventually.
+	--[102662] = 72898,			-- Foul Gift of the Demon Lord //DO NOT USE, overwrites the actual use cooldown with the internal one.
+	--[102664] = 72899,			-- Varo'then's Brooch //DO NOT USE, overwites the actual use cooldown with the internal one.
+	--[102660] = 72901,			-- Rosary of Light //Yet another item with a use and an equip proc. This needs a workaround eventually.
 
 	-- Cataclysm Raid 397
 	[97125] = 69112,			-- The Hungerer
 	[97139] = 69150,			-- Matrix Restabilizer Haste
 	[97140] = 69150,			-- Matrix Restabilizer Crit
 	[97141] = 69150,			-- Matrix Restabilizer Mastery
-	[97136] = 69149,			-- Eye of Blazing Power	-- not sure if that'll work, it's a heal on a party member
+	[97136] = 69149,			-- Eye of Blazing Power	//Not sure if that'll work, it's a heal on a party member.
 	[97129] = 69138,			-- Spidersilk Spindle
 
 	-- Cataclysm Raid 384
@@ -100,7 +102,7 @@ local spellToItem = {
 	[96977] = 68994,			-- Matrix Restabilizer Haste
 	[96978] = 68994,			-- Matrix Restabilizer Crit
 	[96979] = 68994,			-- Matrix Restabilizer Mastery
-	[96966] = 68983,			-- Eye of Blazing Power	-- not sure if that'll work, it's a heal on a party member
+	[96966] = 68983,			-- Eye of Blazing Power	//Not sure if that'll work, it's a heal on a party member.
 	[96945] = 68981,			-- Spidersilk Spindle
 
 	-- Cataclysm Raid 372
@@ -112,7 +114,7 @@ local spellToItem = {
 	[92351] = 65140,			-- Essence of the Cyclone
 	[92342] = 65118,			-- Crushing Weight
 	[92318] = 65053,			-- Bell of Enraging Resonance
-	--[92331] = 65029,			-- Jar of Ancient Remedies. DO NOT USE, overwrites the actual use cooldown with the internal one
+	--[92331] = 65029,			-- Jar of Ancient Remedies ==DO NOT USE, overwrites the actual use cooldown with the internal one.
 
 	-- Cataclysm Raid 359
 	[92108] = 59520,			-- Unheeded Warning
@@ -124,7 +126,7 @@ local spellToItem = {
 	[92126] = 59473,			-- Essence of the Cyclone
 	[91821] = 59506,			-- Crushing Weight
 	[91007] = 59326,			-- Bell of Enraging Resonance
-	--[91322] = 59354,			-- Jar of Ancient Remedies. DO NOT USE, overwrites the actual use cooldown with the internal one
+	--[91322] = 59354,			-- Jar of Ancient Remedies //DO NOT USE, overwrites the actual use cooldown with the internal one.
 
 	-- Cataclysm Dungeon 346
 	[90992] = 56407,			-- Anhuur's Hymnal
@@ -160,10 +162,10 @@ local spellToItem = {
 	[92052] = 55266,			-- Grace of the Herald
 	[90885] = 55787,			-- Witching Hourglass
 
-	-- Cataclysm Quest rewards (and a 5man trinket, sneaky Blizzard!)
+	-- Cataclysm Quest rewards
 	[92166] = {65803, 65805, 65804, 55237}, -- Harrison's Insignia of Panache, Schnotzz's Medallion of Command, Talisman of Sinister Order, Porcelain Crab 
 
-	-- PvP Lvl 85
+	-- PVP Lvl 85
 	[85027] = 61045,			-- Vicious Gladiator's Insignia of Dominance
 	[85032] = 61046,			-- Vicious Gladiator's Insignia of Victory
 	[85022] = 61047,			-- Vicious Gladiator's Insignia of Conquest
@@ -191,7 +193,7 @@ local spellToItem = {
 	[72418] = {50399, 50400},
 	[72414] = {50404, 50403},
 
-	-- Deathbringer's Will (Non-heroic)
+	-- Deathbringer's Will
 	[71485] = 50362,
 	[71492] = 50362,
 	[71486] = 50362,
@@ -227,16 +229,14 @@ local spellToItem = {
 	-- RS trinkets
 	[75458] = 54569,			-- Sharpened Twilight Scale
 	[75466] = 54572,			-- Charred Twilight Scale
-	-- [75490] = 54573,			-- Glowing Twilight Scale
 	[75477] = 54571,			-- Petrified Twilight Scale
 
 	-- Heroic RS trinkets
 	[75456] = 54590,			-- Sharpened Twilight Scale
 	[75473]	= 54588,			-- Charred Twilight Scale
-	-- [75495] = 54589,			-- Glowing Twilight Scale
 	[75480]	= 54591,			-- Petrified Twilight Scale
 
-	-- DK T9 2pc. WTF.
+	-- DK T9 2pc
 	[67117] = {48501, 48502, 48503, 48504, 48505, 48472, 48474, 48476, 48478, 48480, 48491, 48492, 48493, 48494, 48495, 48496, 48497, 48498, 48499, 48500, 48486, 48487, 48488, 48489, 48490, 48481, 48482, 48483, 48484, 48485},
 
 	-- WotLK Epix
@@ -295,7 +295,7 @@ local enchants = {
 	[104993] = {4442, 16},			-- Jade Spirit
 	--[118334] = {4444, 16, 17},		-- Dancing Steel - Agility
 	--[118335] = {4444, 16, 17},		-- Dancing Steel - Strength
-	--[120032] = {4444, 16, 17},		-- Dancing Steel combo spell?	
+	--[120032] = {4444, 16, 17},		-- Dancing Steel combo spell
 	--[116660] = {4446, 16},			-- River's Song
 	[116631] = {4445, 16},			-- Colossus
 
@@ -318,7 +318,7 @@ local enchants = {
 
 -- ICDs on metas assumed to be 45 sec. Needs testing.
 local metas = {
-	-- I've commented these two out, because there aren't really any tactical decisions you could make based on them
+	-- I've commented these two out, because there aren't really any tactical decisions you could make based on them.
 	-- [55382] = 41401,				-- Insightful Earthsiege Diamond
 	-- [32848] = 25901,				-- Insightful Earthstorm Diamond
 
@@ -327,14 +327,16 @@ local metas = {
 	[18803] = 25893,				-- Mystical Skyfire Diamond
 	[32845]	= 25898,				-- Tenacious Earthstorm Diamond
 	[39959] = 32410,				-- Thundering Skyfire Diamond
-	[55379] = 41400					-- Thundering Skyflare Diamond
+	[55379] = 41400,				-- Thundering Skyflare Diamond
 }
 
 -- Spell ID => cooldown, in seconds
 -- If an item isn't in here, 45 sec is assumed.
 local cooldowns = {
 	-- Shado-Pan Assault Valor Items
-	[138702] = 75,	-- Brutal Talisman of the Shado-Pan Assault
+	[138702] = 75,			-- Brutal Talisman of the Shado-Pan Assault
+	[138704] = 45,			-- Volatile Talisman of the Shado-Pan Assault
+	[138700] = 105,			-- Vicious Talisman of the Shado-Pan Assault
 
 	-- Pandaria PVP
 	[126700] = 50,			-- Gladiator's Insignia of Victory
@@ -346,7 +348,7 @@ local cooldowns = {
 	[126650] = 105,			-- Terror in the Mists
 
 	-- Mists of Pandara Darkmoon Cards
-	[128984] = 55, 			-- Relic of Xuen (agi)
+	[128984] = 55, 			-- Relic of Xuen (AGI)
 	[128985] = 50,			-- Relic of Yu'lon
 	[128987] = 50,			-- Relic of Chi Ji
 
@@ -460,8 +462,8 @@ local cooldowns = {
 	[92052] = 50,			-- Grace of the Herald
 	[90885] = 75,			-- Witching Hourglass
 
-	-- Cataclysm Quest rewards (and a 5man trinket, sneaky Blizzard!)
-	[92166] = 80,			-- Harrison's Insignia of Panache, Schnotzz's Medallion of Command, Talisman of Sinister Order, Porcelain Crab, confirm!
+	-- Cataclysm Quest rewards
+	[92166] = 80,			-- Harrison's Insignia of Panache, Schnotzz's Medallion of Command, Talisman of Sinister Order, Porcelain Crab
 
 	-- PvP Lvl 85
 	[85027] = 50,			-- Vicious Gladiator's Insignia of Dominance
@@ -502,7 +504,7 @@ local cooldowns = {
 	[48518] = 30,
 	[47755] = 12,
 
-	-- Deathbringer's Will, XI from #elitistjerks says it's 105 sec so if it's wrong yell at him.
+	-- Deathbringer's Will
 	[71485] = 105,
 	[71492] = 105,
 	[71486] = 105,
@@ -524,21 +526,18 @@ local cooldowns = {
 	[71636] = 90,
 
 	-- RS trinkets
-	[75458] = 45,				-- Sharpened Twilight Scale
-	[75466] = 45,				-- Charred Twilight Scale
-	-- [75490] = 54573,			-- Glowing Twilight Scale
-	[75477] = 45,				-- Petrified Twilight Scale
+	[75458] = 45,			-- Sharpened Twilight Scale
+	[75466] = 45,			-- Charred Twilight Scale
+	[75477] = 45,			-- Petrified Twilight Scale
 
 	-- Heroic RS trinkets
-	[75456] = 45,				-- Sharpened Twilight Scale
-	[75473] = 45,				-- Charred Twilight Scale
-	-- [75495] = 54589,			-- Glowing Twilight Scale
-	[75480] = 45,				-- Petrified Twilight Scale
+	[75456] = 45,			-- Sharpened Twilight Scale
+	[75473] = 45,			-- Charred Twilight Scale
+	[75480] = 45,			-- Petrified Twilight Scale
 
 	-- Black Magic
 	[59626] = 35,
 }
-
 
 -- Procced spell effect ID = unique name
 -- The name doesn't matter, as long as it's non-numeric and unique to the ICD.
@@ -557,14 +556,12 @@ local talents = {
 	-- Priest
 	[47755] = "Rapture",
 }
------------------------------------------------------------------------
--- Don't edit past this line									--
------------------------------------------------------------------------
 
-------------------------------------
+--[[
+	Don't edit past this line
+]]--
+
 -- Upgrade this data into the lib
-------------------------------------
-
 lib.spellToItem = lib.spellToItem or {}
 lib.cooldowns = lib.cooldowns or {}
 lib.enchants = lib.enchants or {}

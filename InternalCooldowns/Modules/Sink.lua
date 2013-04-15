@@ -2,9 +2,9 @@ local ICD = LibStub("AceAddon-3.0"):GetAddon("InternalCooldowns")
 local mod = ICD:NewModule("Sink", "AceEvent-3.0", "LibSink-2.0", "AceTimer-3.0")
 local lib = LibStub("LibInternalCooldowns-1.0")
 
-local defaults = {profile = {sinkOptions = {}}}
-local options = {type = "group", name = "Scrolling Combat Text", args = {}}
-local times = {}
+local defaults = {profile = {sinkOptions = { }}}
+local options = {type = "group", name = "Scrolling Combat Text", args = { }}
+local times = { }
 local frame = CreateFrame("Frame")
 
 function mod:OnInitialize()

@@ -2,10 +2,10 @@ local mod = LibStub("AceAddon-3.0"):NewAddon("InternalCooldowns")
 
 local options = {
 	type = "group",
-	args = {}
+	args = { }
 }
 
-local optionFrames = {}
+local optionFrames = { }
 local ACD3 = LibStub("AceConfigDialog-3.0")
 
 function mod:OnInitialize()

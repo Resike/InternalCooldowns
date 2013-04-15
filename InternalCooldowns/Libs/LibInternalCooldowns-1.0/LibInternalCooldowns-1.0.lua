@@ -42,7 +42,7 @@ local INVALID_EVENTS = {
 	SPELL_AURA_REMOVED_DOSE = true,
 	SPELL_AURA_BROKEN 		= true,
 	SPELL_AURA_BROKEN_SPELL = true,
-	SPELL_CAST_FAILED 		= true
+	SPELL_CAST_FAILED 		= true,
 }
 
 local slots = {
@@ -245,7 +245,7 @@ end
 		local start, duration, running = cooldownReturn(id)
 		if start then return start, duration, running end
 	elseif t == "macro" then
-		local null, tex = GetMacroInfo(id)
+		local _, tex = GetMacroInfo(id)
 		if tex == GetInventoryItemTexture("player", 13) then
 			id = tonumber(GetInventoryItemLink("player", 13):match("item:(%d+)"))
 			local start, duration, running = cooldownReturn(id)
