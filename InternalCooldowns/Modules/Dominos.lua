@@ -12,7 +12,7 @@ end
 
 function mod:InternalCooldowns_Proc()
 	for i = 1, 120 do
-		local f = _G["ActionButton"..i]
+		local f = _G["DominosActionButton"..i]
 		if f and f:IsVisible() then
 			ActionButton_UpdateCooldown(f)
 		end

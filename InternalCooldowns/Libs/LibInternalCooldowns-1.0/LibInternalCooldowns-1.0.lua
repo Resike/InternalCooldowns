@@ -15,14 +15,14 @@ local wipe = _G.wipe
 local playerGUID = UnitGUID("player")
 local GetTime = _G.GetTime
 
-lib.spellToItem = lib.spellToItem or {}
-lib.cooldownStartTimes = lib.cooldownStartTimes or {}
-lib.cooldownDurations = lib.cooldownDurations or {}
+lib.spellToItem = lib.spellToItem or { }
+lib.cooldownStartTimes = lib.cooldownStartTimes or { }
+lib.cooldownDurations = lib.cooldownDurations or { }
 lib.callbacks = lib.callbacks or CallbackHandler:New(lib)
 lib.cooldowns = lib.cooldowns or nil
-lib.hooks = lib.hooks or {}
+lib.hooks = lib.hooks or { }
 
-local enchantProcTimes = {}
+local enchantProcTimes = { }
 
 if not lib.eventFrame then
 	lib.eventFrame = CreateFrame("Frame")
@@ -71,7 +71,7 @@ local slots = {
 function lib:PLAYER_ENTERING_WORLD()
 	playerGUID = UnitGUID("player")	
 	self:Hook("GetInventoryItemCooldown")
-	--self:Hook("GetActionCooldown")
+	self:Hook("GetActionCooldown")
 	self:Hook("GetItemCooldown")
 end
 
@@ -239,8 +239,8 @@ function lib:GetInventoryItemCooldown(unit, slot)
 	return start, duration, enable
 end
 
---[[function lib:GetActionCooldown(slotID)
-	local t, id, subtype, globalID = GetActionInfo(slotID)
+function lib:GetActionCooldown(slotID)
+	local t, id, subtype = GetActionInfo(slotID)
 	if t == "item" then
 		local start, duration, running = cooldownReturn(id)
 		if start then return start, duration, running end
@@ -257,7 +257,7 @@ end
 		end
 	end
 	return self.hooks.GetActionCooldown(slotID)
-end]]--
+end
 
 function lib:GetItemCooldown(param)
 	local id

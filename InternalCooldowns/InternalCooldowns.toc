@@ -10,3 +10,4 @@
 ## X-Curse-Repository-ID: wow/internal-cooldowns/mainline
 
 InternalCooldowns.xml
+InternalCooldowns.lua
