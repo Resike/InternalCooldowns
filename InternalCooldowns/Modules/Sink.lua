@@ -39,16 +39,14 @@ function mod.ProcessTimers()
 	local total = 0
 	for itemID, upAt in pairs(times) do
 		if upAt < t then
-			local spellID, name, tex
+			local _, spellID, name, tex
 			if type(itemID) == "string" then
 				spellID = itemID:match("spell:(%d+)")
 			end
 			if spellID then
-				name = select(1, GetSpellInfo(tonumber(spellID)))
-				tex = select(3, GetSpellInfo(tonumber(spellID)))
+				name, _, tex = GetSpellInfo(tonumber(spellID))
 			else
-				name = select(1, GetItemInfo(itemID))
-				tex = select(10, GetItemInfo(itemID))
+				name, _, _, _, _, _, _, _, _, tex= GetItemInfo(itemID)
 			end
 			mod:Pour(("%s: %s"):format(L["ICD Ready"], name), 1, 1, 0, nil, 24, "OUTLINE", true, nil, tex)
 			times[itemID] = nil

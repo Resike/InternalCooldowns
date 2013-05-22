@@ -13,13 +13,12 @@ function mod:OnDisable()
 end
 
 function mod:InternalCooldowns_TalentProc(callback, spellID, start, duration)
-	local name = select(1, GetSpellInfo(spellID))
-	local icon = select(3, GetSpellInfo(spellID))
+	local name, _, icon = GetSpellInfo(spellID)
 	FW:HiddenCooldown(name, duration, icon)
 end
 
 function mod:InternalCooldowns_Proc(callback, itemID, spellID, start, duration)
 	local name = GetSpellInfo(spellID)
-	local texture = select(10, GetItemInfo(itemID))
+	local _, _, _, _, _, _, _, _, _, texture = GetItemInfo(itemID)
 	FW:HiddenCooldown(name, duration, texture)
 end

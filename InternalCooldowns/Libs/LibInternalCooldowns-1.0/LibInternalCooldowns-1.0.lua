@@ -100,7 +100,7 @@ local function checkSlotForEnchantID(slot, enchantID)
 end
 
 local function isEquipped(itemID)
-	local equipLoc = select(9, GetItemInfo(itemID))
+	local _, _, _, _, _, _, _, _, equipLoc = GetItemInfo(itemID)
 	local slot = slots[equipLoc]
 	
 	if type(slot) == "table" then
