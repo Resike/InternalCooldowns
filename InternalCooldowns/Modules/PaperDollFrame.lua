@@ -43,7 +43,7 @@ function mod:UNIT_INVENTORY_CHANGED(unit)
 			local link = GetInventoryItemLink(unit, i)
 			if link then
 				equippedItems[tonumber(link:match("item:(%d+)") or 0)] = i
-			end			
+			end
 		end
 	end
 end
