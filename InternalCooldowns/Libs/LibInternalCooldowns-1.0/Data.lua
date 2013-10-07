@@ -2,6 +2,15 @@ local lib, oldminor = LibStub:GetLibrary("LibInternalCooldowns-1.0")
 
 -- Format is spellID = itemID | {itemID, itemID, ... itemID}
 local spellToItem = {
+	-- Mists of Pandaria T16 Raids
+	[146245] = {104993, 104744, 102298, 105242, 104495, 105491},	-- Evil Eye of Galakras
+
+	-- Timeless Isle
+	[146296] = {103689, 103989},	-- Alacrity of Xuen
+
+	-- Mists of Pandaria T15 Raids
+	[138759] = 95726,	-- Fabled Feather of Ji-Kun
+
 	-- Shado-Pan Assault Valor Items
 	[138702] = 94508,	-- Brutal Talisman of the Shado-Pan Assault
 	[138704] = 94510,	-- Volatile Talisman of the Shado-Pan Assault
@@ -11,7 +20,7 @@ local spellToItem = {
 	[126700] = {84937, 91415, 91768, 94415},	-- Gladiator's Insignia of Victory
 	[127928] = 87574,	-- Coren's Cold Chromium Coaster
 	
-	-- Mists of Pandaria T14 Raids 
+	-- Mists of Pandaria T14 Raids
 	[126533] = {86790, 86131, 87063},	-- Vial of Dragon's Blood
 	[126577] = {86792, 86133, 87065},	-- Light of the Cosmos	
 	[126588] = {86805, 86147, 87075},	-- Qin-Xi's Polarizing Seal
@@ -333,6 +342,15 @@ local metas = {
 -- Spell ID => cooldown, in seconds
 -- If an item isn't in here, 45 sec is assumed.
 local cooldowns = {
+	-- Mists of Pandaria T16 Raids
+	[146245] = 55, -- Evil Eye of Galakras
+
+	-- Timeless Isle
+	[146296] = 115,	-- Alacrity of Xuen
+
+	-- Mists of Pandaria T15 Raids
+	[138759] = 22,	-- Fabled Feather of Ji-Kun
+
 	-- Shado-Pan Assault Valor Items
 	[138702] = 75,			-- Brutal Talisman of the Shado-Pan Assault
 	[138704] = 45,			-- Volatile Talisman of the Shado-Pan Assault
