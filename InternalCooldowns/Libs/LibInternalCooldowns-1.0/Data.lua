@@ -3,13 +3,14 @@ local lib, oldminor = LibStub:GetLibrary("LibInternalCooldowns-1.0")
 -- Format is spellID = itemID | {itemID, itemID, ... itemID}
 local spellToItem = {
 	-- Mists of Pandaria T16 Raids
+	[146250] = {105111, 104862, 102302, 105360, 104613, 105609},	-- Thok's Tail Tip
 	[146245] = {104993, 104744, 102298, 105242, 104495, 105491},	-- Evil Eye of Galakras
 
 	-- Timeless Isle
 	[146296] = {103689, 103989},	-- Alacrity of Xuen
 
 	-- Mists of Pandaria T15 Raids
-	[138759] = 95726,	-- Fabled Feather of Ji-Kun
+	[138759] = {95726, 94515, 96098, 96470, 96842},	-- Fabled Feather of Ji-Kun
 
 	-- Shado-Pan Assault Valor Items
 	[138702] = 94508,	-- Brutal Talisman of the Shado-Pan Assault
@@ -343,7 +344,8 @@ local metas = {
 -- If an item isn't in here, 45 sec is assumed.
 local cooldowns = {
 	-- Mists of Pandaria T16 Raids
-	[146245] = 55, -- Evil Eye of Galakras
+	[146250] = 115,	-- Thok's Tail Tip
+	[146245] = 55,	-- Evil Eye of Galakras
 
 	-- Timeless Isle
 	[146296] = 115,	-- Alacrity of Xuen
