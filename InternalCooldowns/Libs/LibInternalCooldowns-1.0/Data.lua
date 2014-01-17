@@ -5,6 +5,7 @@ local spellToItem = {
 	-- Mists of Pandaria T16 Raids
 	[146250] = {105111, 104862, 102302, 105360, 104613, 105609},	-- Thok's Tail Tip
 	[146245] = {104993, 104744, 102298, 105242, 104495, 105491},	-- Evil Eye of Galakras
+	[148899] = {104961, 104712, 102295, 105210, 104463, 105459},	-- Fusion-Fire Core
 
 	-- Timeless Isle
 	[146296] = {103689, 103989},	-- Alacrity of Xuen
@@ -346,6 +347,7 @@ local cooldowns = {
 	-- Mists of Pandaria T16 Raids
 	[146250] = 115,	-- Thok's Tail Tip
 	[146245] = 55,	-- Evil Eye of Galakras
+	[148899] = 85,	-- Fusion-Fire Core
 
 	-- Timeless Isle
 	[146296] = 115,	-- Alacrity of Xuen
