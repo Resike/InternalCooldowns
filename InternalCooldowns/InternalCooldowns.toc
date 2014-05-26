@@ -1,6 +1,6 @@
-## Interface: 50300
-## Title: InternalCooldowns |cFF99CC01rev|r |cFFFF00002.0.5|r
-## Version: 2.0.5
+## Interface: 50400
+## Title: InternalCooldowns |cFF99CC01rev|r |cFFFF00002.0.6|r
+## Version: 2.0.6
 ## Notes: Adds cooldown timers to your trinket procs.
 ## Author: Resike
 ## OptionalDeps: Ace3, LibInternalCooldowns-1.0, LibSink-2.0, Bartender4, Forte_Cooldown

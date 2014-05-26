@@ -11,7 +11,7 @@ local spellToItem = {
 	[146296] = {103689, 103989},	-- Alacrity of Xuen
 
 	-- Mists of Pandaria T15 Raids
-	[138759] = {95726, 94515, 96098, 96470, 96842},	-- Fabled Feather of Ji-Kun
+	--[138759] = {95726, 94515, 96098, 96470, 96842},	-- Fabled Feather of Ji-Kun
 
 	-- Shado-Pan Assault Valor Items
 	[138702] = 94508,	-- Brutal Talisman of the Shado-Pan Assault
@@ -19,7 +19,7 @@ local spellToItem = {
 	[138700] = 94511,	-- Vicious Talisman of the Shado-Pan Assault
 	
 	-- Pandaria PVP
-	[126700] = {84937, 91415, 91768, 94415},	-- Gladiator's Insignia of Victory
+	[126700] = {84937, 91415, 91768, 94415, 100505, 102699},	-- Gladiator's Insignia of Victory
 	[127928] = 87574,	-- Coren's Cold Chromium Coaster
 	
 	-- Mists of Pandaria T14 Raids
@@ -38,10 +38,10 @@ local spellToItem = {
 	[128984] = 79328,			-- Relic of Xuen (agi)
 	[128985] = 79331,			-- Relic of Yu'lon
 	[128986] = 79327,			-- Relic of Xuen (str)
-	[128987] = 79330, 			-- Relic of Chi Ji
+	[128987] = 79330,			-- Relic of Chi Ji
 
 	-- Mists of Pandaria Brewfest
-	[127923] = 87572, 			-- Mithril Wristwatch
+	[127923] = 87572,			-- Mithril Wristwatch
 	[127914] = 87573,			-- Thousand-Year Pickled Egg
 	[127926] = 87574,			-- Coren's Cold Chromium Coaster
 
@@ -64,7 +64,7 @@ local spellToItem = {
 	[92233] = 58182,			-- Bedrock Talisman
 
 	-- Dragon Soul Heroic 410
-	[109804] = 77989, 			-- Seal of the Seven Signs
+	[109804] = 77989,			-- Seal of the Seven Signs
 	[109776] = 77990,			-- Soulshifter Vortex
 	[109789] = 77991,			-- Insignia of the Corrupted Mind
 	[109744] = 77992,			-- Creche of the Final Dragon
@@ -252,9 +252,9 @@ local spellToItem = {
 
 	-- WotLK Epix
 	[67671] = 47214,			-- Banner of Victory
-	[67669] = 47213, 			-- Abyssal Rune 
-	[64772] = 45609, 			-- Comet's Trail
-	[65024] = 46038, 			-- Dark Matter
+	[67669] = 47213,			-- Abyssal Rune 
+	[64772] = 45609,			-- Comet's Trail
+	[65024] = 46038,			-- Dark Matter
 	[60443] = 40371,			-- Bandit's Insignia
 	[64790] = 45522,			-- Blood of the Old God
 	[60203] = 42990,			-- Darkmoon Card: Death
@@ -263,15 +263,15 @@ local spellToItem = {
 	[60492] = 39229,			-- Embrace of the Spider
 	[60530] = 40258,			-- Forethought Talisman
 	[60437] = 40256,			-- Grim Toll
-	[49623] = 37835, 			-- Je'Tze's Bell
-	[65019] = 45931, 			-- Mjolnir Runestone
+	[49623] = 37835,			-- Je'Tze's Bell
+	[65019] = 45931,			-- Mjolnir Runestone
 	[64741] = 45490,			-- Pandora's Plea
 	[65014] = 45286,			-- Pyrite Infuser
-	[65003] = 45929, 			-- Sif's Remembrance
+	[65003] = 45929,			-- Sif's Remembrance
 	[60538] = 40382,			-- Soul of the Dead
 	[58904] = 43573,			-- Tears of Bitter Anguish
 	[60062] = {40685, 49078},	-- The Egg of Mortal Essence, Ancient Pickled Egg
-	[64765] = 45507, 			-- The General's Heart
+	[64765] = 45507,			-- The General's Heart
 
 	-- WotLK Blues
 	[51353]	= 38358,			-- Arcane Revitalizer
@@ -281,9 +281,9 @@ local spellToItem = {
 	[63250] = 45131,			-- Jouster's Fury
 	[63250] = 45219,			-- Jouster's Fury
 	[60302] = 37390,			-- Meteorite Whetstone
-	[54808] = 40865, 			-- Noise Machine
-	[60483] = 37264, 			-- Pendulum of Telluric Currents
-	[52424] = 38675, 			-- Signet of the Dark Brotherhood
+	[54808] = 40865,			-- Noise Machine
+	[60483] = 37264,			-- Pendulum of Telluric Currents
+	[52424] = 38675,			-- Signet of the Dark Brotherhood
 	[55018] = 40767,			-- Sonic Booster
 	[52419] = 38674,			-- Soul Harvester's Charm
 	-- [18350] = 37111,			-- Soul Preserver, no internal cooldown
@@ -334,7 +334,7 @@ local metas = {
 	-- [32848] = 25901,				-- Insightful Earthstorm Diamond
 
 	[23454] = 25899,				-- Brutal Earthstorm Diamond
-	[55341] = 41385, 				-- Invigorating Earthsiege Diamond
+	[55341] = 41385,				-- Invigorating Earthsiege Diamond
 	[18803] = 25893,				-- Mystical Skyfire Diamond
 	[32845]	= 25898,				-- Tenacious Earthstorm Diamond
 	[39959] = 32410,				-- Thundering Skyfire Diamond
@@ -353,7 +353,7 @@ local cooldowns = {
 	[146296] = 115,	-- Alacrity of Xuen
 
 	-- Mists of Pandaria T15 Raids
-	[138759] = 22,	-- Fabled Feather of Ji-Kun
+	--[138759] = 22,	-- Fabled Feather of Ji-Kun
 
 	-- Shado-Pan Assault Valor Items
 	[138702] = 75,			-- Brutal Talisman of the Shado-Pan Assault
@@ -370,7 +370,7 @@ local cooldowns = {
 	[126650] = 105,			-- Terror in the Mists
 
 	-- Mists of Pandara Darkmoon Cards
-	[128984] = 55, 			-- Relic of Xuen (AGI)
+	[128984] = 55,			-- Relic of Xuen (AGI)
 	[128985] = 50,			-- Relic of Yu'lon
 	[128987] = 50,			-- Relic of Chi Ji
 
@@ -390,7 +390,7 @@ local cooldowns = {
 	[92233] = 30,			-- Bedrock Talisman
 
 	-- Dragon Soul Heroic 410
-	[109804] = 90, 			-- Seal of the Seven Signs
+	[109804] = 90,			-- Seal of the Seven Signs
 	[109776] = 90,			-- Soulshifter Vortex
 	[109789] = 90,			-- Insignia of the Corrupted Mind
 	[109744] = 90,			-- Creche of the Final Dragon
@@ -500,7 +500,7 @@ local cooldowns = {
 	--[118334] = 60,			-- Dancing Steel - Agility
 	--[118335] = 60,			-- Dancing Steel - Strength
 	--[120032] = 60,			-- Dancing Steel combo spell?	
-	--[116660] = 30, 			-- River's Song
+	--[116660] = 30,			-- River's Song
 	[116631] = 3,			-- Colossus
 
 	-- Cataclysm enchants
@@ -584,14 +584,13 @@ local talents = {
 ]]--
 
 -- Upgrade this data into the lib
-lib.spellToItem = lib.spellToItem or {}
-lib.cooldowns = lib.cooldowns or {}
-lib.enchants = lib.enchants or {}
-lib.metas = lib.metas or {}
-lib.talents = lib.talents or {}
+lib.spellToItem = lib.spellToItem or { }
+lib.cooldowns = lib.cooldowns or { }
+lib.enchants = lib.enchants or { }
+lib.metas = lib.metas or { }
+lib.talents = lib.talents or { }
 
-local tt, tts = {}, {}
-local _
+local tt, tts = { }, { }
 local function merge(t1, t2)
 	wipe(tts)
 	for _, v in ipairs(t1) do
